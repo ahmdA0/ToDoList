@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>To_Do_List</title>
+</head>
+<body>
+    <h3 id="title">check task that you've done:</h3>
+    <input  type="checkbox" class="ReferencedTask" onclick="chkClick()" />
+    <label  class="task1" >To complete this task_1</label><br/>
+    <input  type="checkbox" class="ReferencedTask" onclick="chkClick()" />
+    <label  class="task1" >To complete this task_2</label><br/>
+    <input  type="checkbox" class="ReferencedTask" onclick="chkClick()" />
+    <label  class="task1" >To complete this task_3</label><br/>
+    <script>
+        
+        function chkClick(){
+        var task = document.getElementsByClassName('ReferencedTask');
+        var task2 = document.getElementsByClassName('task1');
+        for(i=0;i<task.length;i++)
+        if(task[i].checked)
+        task2[i].style.textDecoration = 'line-through'
+        else
+        task2[i].style.textDecoration = 'none';   
+        }
+    </script>
+</body>
+</html>
